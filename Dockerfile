@@ -2,6 +2,8 @@ FROM localhost:5000/openjdk:8-alpine
 
 COPY gradle-dist/gradle-4.3-bin.zip .
 
+RUN mkdir /opt
+
 RUN unzip gradle-4.3-bin.zip  -d /opt \
     && rm gradle-4.3-bin.zip
 
