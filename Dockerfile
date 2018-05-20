@@ -1,6 +1,6 @@
-FROM localhost:5000/openjdk:8-alpine
+FROM openjdk:8-alpine
 
-COPY gradle-dist/gradle-4.3-bin.zip .
+RUN wget https://services.gradle.org/distributions/gradle-4.3-bin.zip
 
 RUN mkdir /opt
 
